@@ -37,5 +37,5 @@ function operate(num1, num2, operator){
     }
 }
 
-operator = '+'
+operator = prompt("What ya wanna do?")
 console.log(operate(displayOne, displayTwo, operator))
