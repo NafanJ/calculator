@@ -1,3 +1,5 @@
+const displayContainer = document.querySelector(".display")
+
 let displayOne = 1
 let operator = ''
 let displayTwo = 6
@@ -37,5 +39,20 @@ function operate(num1, num2, operator){
     }
 }
 
-operator = prompt("What ya wanna do?")
+//operator = prompt("What ya wanna do?")
 console.log(operate(displayOne, displayTwo, operator))
+
+keys = [1,2,3,4,5,6,7,8,9]
+function addKeys(){
+    const keypadContainer = document.getElementsByClassName("keypad")
+    for (let i =0; i< keys.length; i++){
+        const key = document.createElement("button")
+        key.innerText = keys[i];
+        key.addEventListener('click', function(e){
+            displayContainer.innerText = e.target.innerText
+        })
+        keypadContainer[0].appendChild(key)
+    }
+}
+
+addKeys()
