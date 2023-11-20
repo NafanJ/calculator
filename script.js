@@ -23,6 +23,7 @@ function divide(num1, num2){
 }
 
 function operate(num1, num2, operator){
+    const sum = displayContainer.innerText
     switch(operator){
         case '+':
             return add(num1, num2)
@@ -42,7 +43,7 @@ function operate(num1, num2, operator){
 //operator = prompt("What ya wanna do?")
 console.log(operate(displayOne, displayTwo, operator))
 
-keys = [1,2,3,4,5,6,7,8,9]
+keys = [7,8,9,'/',4,5,6,'*',1,2,3,'-','.',0,'=','+']
 function addKeys(){
     const keypadContainer = document.getElementsByClassName("keypad")
     for (let i =0; i< keys.length; i++){
